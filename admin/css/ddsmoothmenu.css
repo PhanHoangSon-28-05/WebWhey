@@ -1,0 +1,101 @@
+.ddsmoothmenu{
+	float: left;
+}
+
+.ddsmoothmenu ul{
+	z-index:100;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/*Top level list items*/
+.ddsmoothmenu ul li{
+	position: relative;
+	display: inline;
+	float: left;
+}
+
+/*Top level menu link items style*/
+.ddsmoothmenu ul li a {
+	display: block;
+	padding: 0 25px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 25px;
+	color: #2f2f2f;	
+	text-decoration: none;
+	outline: none;
+	text-align: center;
+}
+
+* html .ddsmoothmenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+display: inline-block;
+}
+
+.ddsmoothmenu ul li a.selected, .ddsmoothmenu ul li a:hover { /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+	color: #fff;
+	background: #2f2f2f;
+}
+
+/* Holly Hack for IE \*/
+* html .ddsmoothmenu{height: 1%;} /*Holly Hack for IE7 and below*/
+
+.ddsmoothmenu_right{
+	margin-left: 23px;
+	margin-right: -12px;
+}
+
+.ddsmoothmenu_right ul{
+	z-index:100;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.ddsmoothmenu_right ul li{
+	position: relative;
+	display: inline;
+	
+}
+
+.ddsmoothmenu_right ul li a{
+	display: block;
+	padding: 0 30px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 25px;
+	color: #2f2f2f;	
+	text-decoration: none;
+	border-bottom: 2px solid #000;
+	background-color: white;
+	outline: none;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+* html .ddsmoothmenu_right ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+	display: inline-block;
+}
+.ddsmoothmenu_right ul li a.selected, .ddsmoothmenu_right ul li a:hover { /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+	color: #fff;
+	background: #2f2f2f;
+}
+
+.ddsmoothmenu_right ul li > .sub_menu{
+	position: absolute;
+	left: 300px;
+	width: 310px;
+	top: 0px;
+	display: none;
+	
+}
+
+.ddsmoothmenu_right ul li:hover .sub_menu{
+	display: block;
+}
+
+.handle{
+	background-color: aliceblue;
+	border-bottom: 2px solid #000;
+	border-radius: 10px;
+}

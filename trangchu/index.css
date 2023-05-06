@@ -1,0 +1,18 @@
+body{
+    width: auto;
+    height: auto;
+}
+
+.right{
+    background-color: aquamarine;
+    display: block;
+    float: left;
+    width: 300px;
+    height: 300px;
+}
+.left{
+    background-color: black;
+    float: left;
+    width: 300px;
+    height: 300px;
+}

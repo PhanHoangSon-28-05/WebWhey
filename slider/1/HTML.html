@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="js.js">
+</head>
+<body>
+   <!--Nguồn W3School -->
+<!-- Thẻ Chứa Slideshow -->
+ <div class="slideshow-container">
+    <!-- Kết hợp hình ảnh và nội dung cho mội phần tử trong slideshow-->
+     <div class="mySlides fade">
+       <div class="numbertext">1 / 3</div>
+       <img src="https://images.pexels.com/photos/1632790/pexels-photo-1632790.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="width:100%">
+       <div class="text">Nội Dung 1</div>
+     </div>
+    <div class="mySlides fade">
+       <div class="numbertext">2 / 3</div>
+       <img src="https://images.pexels.com/photos/1581026/pexels-photo-1581026.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="width:100%">
+       <div class="text">Nội Dung 2</div>
+     </div>
+    <div class="mySlides fade">
+       <div class="numbertext">3 / 3</div>
+       <img src="https://images.pexels.com/photos/2582546/pexels-photo-2582546.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="width:100%">
+       <div class="text">Nội Dung 3</div>
+     </div>
+    <!-- Nút điều khiển mũi tên-->
+     <a class="prev" onclick="plusSlides(-1)">❮</a>
+     <a class="next" onclick="plusSlides(1)">❯</a>
+   </div>
+   <br>
+  <!-- Nút tròn điều khiển slideshow-->
+   <div style="text-align:center">
+     <span class="dot" onclick="currentSlide(1)"></span>
+     <span class="dot" onclick="currentSlide(2)"></span>
+     <span class="dot" onclick="currentSlide(3)"></span>
+   </div>
+</body>
+</html>
