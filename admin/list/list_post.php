@@ -23,7 +23,7 @@
     <tbody>
         <?php 
             include('../connet.php');
-            $sql = " SELECT * from baiviet bv, loaitin l, sanpham s where bv.idloaitin = l.idloaitin and s.IDSanPham = bv.IDSanPham order by idbaiviet ASC";
+            $sql = " SELECT * from baiviet bv, sanpham s where  s.IDSanPham = bv.IDSanPham order by idbaiviet ASC";
             $kq = mysqli_query($con, $sql);
             if (mysqli_num_rows($kq) > 0) {
                 while ($row = mysqli_fetch_array($kq)) {
@@ -31,7 +31,16 @@
                      <tr>
                         <td><?php echo $row['idbaiviet'];?></td>
                         <td style="text-align: left;"><?php echo $row['TenSanPham'];?></td>
-                        <td><?php echo $row['tenloaitin'];?></td>
+                        <td><?php
+                            $idSanpham = $row['IDSanPham'];
+                            $sql_loaitin = " SELECT * from baiviet bv, loaitin l, sanpham s where bv.idloaitin = l.idloaitin and s.IDSanPham = bv.IDSanPham and bv.IDSanPham = $idSanpham";
+                            $kq_loaitin = mysqli_query($con, $sql_loaitin);
+                            $row_loaitin = mysqli_fetch_array($kq_loaitin);
+                         if (mysqli_num_rows($kq_loaitin) == 0) {
+                              echo "Không có";
+                          } else {
+                              echo $row_loaitin['tenloaitin'];
+                          }?></td>
                         <td width="250px"><img class="card-img-top" style=" max-width:50%; height:atou; margin-right:20px;" src="<?php echo $row['anhminhhoa'];?>"  alt=""></td>
                    
                     </tr>

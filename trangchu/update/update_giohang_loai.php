@@ -13,11 +13,11 @@
         $kq_capnhap = mysqli_query($con, $sql_capnhap_giohang);
         if ($kq_capnhap === TRUE) {
             ?>
-                <script>
-                    alert("Bạn thêm sản phẩm vào giỏ hàng");
-                    window.location="../trangchu/index.php?admin=loaisp&IDLoai=<?php echo $id_DS_Loai;?>";
-                </script>
-            <?php
+<script>
+    alert("Bạn thêm sản phẩm vào giỏ hàng");
+    window.location = "../trangchu/index.php?admin=loaisp&IDLoai=<?php echo $id_DS_Loai;?>";
+</script>
+<?php
         }
     }else{
         $sql_capnhap_giohang = "INSERT INTO `giohang`(IDTaiKhoan, IDSanPham, SoLuong) VALUES ('$idtaikhoan','$idsanpham','1')";
@@ -25,11 +25,11 @@
         $stmt = mysqli_query($con, $sql_capnhap_giohang); 
             if ($stmt === TRUE) {
                 ?>
-                    <script>
-                        alert("Bạn thêm sản phẩm vào giỏ hàng");
-                        window.location="../trangchu/index.php?admin=loaisp&IDLoai=<?php echo $id_DS_Loai;?>";
-                    </script>
-                    <?php
+<script>
+    alert("Bạn thêm sản phẩm vào giỏ hàng");
+    window.location = "../trangchu/index.php?admin=loaisp&IDLoai=<?php echo $id_DS_Loai;?>";
+</script>
+<?php
                     
             }
     }

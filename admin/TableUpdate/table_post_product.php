@@ -18,7 +18,7 @@
             include('../connet.php');
             $id = $_GET['IDBaiViet'];
             $idview = $_GET['IDView'];
-            $sql = " SELECT * from baiviet bv, sanpham sp, loaitin lt where bv.IDSanPham = sp.IDSanPham and lt.idloaitin = bv.idloaitin and idbaiviet = $id";
+            $sql = " SELECT * from baiviet bv, sanpham sp where bv.IDSanPham = sp.IDSanPham and idbaiviet = $id";
             $kq = mysqli_query($con, $sql);
             if (mysqli_num_rows($kq) > 0) {
                 while ($row1 = mysqli_fetch_array($kq)) {
@@ -60,14 +60,33 @@
                     </div>
                     <div class="col-6">
                         <select style="height:30px; font-size: 20px;" name="idloaitin" id="">
-                        <option value="<?php echo $row1['idloaitin']?>"><?php echo $row1['tenloaitin']?></option>
+                        <option value="<?php echo $row1['idloaitin']?>"><?php
+                            $idSanpham = $row1['IDSanPham'];
+                            $sql_loaitin = " SELECT * from baiviet bv, loaitin l, sanpham s where bv.idloaitin = l.idloaitin and s.IDSanPham = bv.IDSanPham and bv.IDSanPham = $idSanpham";
+                            $kq_loaitin = mysqli_query($con, $sql_loaitin);
+                            $row_loaitin = mysqli_fetch_array($kq_loaitin);
+                         if (mysqli_num_rows($kq_loaitin) == 0) {
+                              echo "Không có";
+                          } else {
+                              echo $row_loaitin['tenloaitin'];
+                          }?>
+                          </option>
                             <?php
-                                $id_loaitin = $row1['idloaitin'];
-                                $sql = "Select * from loaitin EXCEPT  Select * from loaitin where idloaitin = $id_loaitin";
-                                $nhacc = mysqli_query($con, $sql);
-                                while ($row = mysqli_fetch_array($nhacc)) {
+                                if (mysqli_num_rows($kq_loaitin) == 0) {
+                                    $sql_lt = "Select * from loaitin";
+                                    $kq_lt = mysqli_query($con, $sql_lt);
+                                    while ($row = mysqli_fetch_array($kq_lt)) {
+                                        echo "<option value =".$row['idloaitin'].">".$row['tenloaitin']."</option>";
+                                    }
+                                } else {
+                                    $id_loaitin = $row1['idloaitin'];
+                                    $sql = "Select * from loaitin EXCEPT  Select * from loaitin where idloaitin = $id_loaitin";
+                                    $kq = mysqli_query($con, $sql);
+                                    while ($row = mysqli_fetch_array($kq)) {
                                     echo "<option value =".$row['idloaitin'].">".$row['tenloaitin']."</option>";
                                 }
+                                }
+                                
                             ?>
                         </select>                    
                     </div>  

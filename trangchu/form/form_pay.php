@@ -38,7 +38,8 @@
                         </div>
                         <div class="col-6">
                             <input name="UserName" type="text" class="form-control" id=""
-                                placeholder="Nhập tên người nhận" value="<?php echo $row['Ho'].' '.$row['Ten'];?>" required>
+                                placeholder="Nhập tên người nhận" value="<?php echo $row['Ho'].' '.$row['Ten'];?>"
+                                required>
                         </div>
                         <!-- User Name -->
                         <div class="row g-3 align-items-center" style="margin-top:20px; margin-bottom:20px;">
@@ -46,8 +47,8 @@
                                 <label>Đia chỉ người nhận: </label>
                             </div>
                             <div class="col-6">
-                                <input name="address" type="text" class="form-control" id=""
-                                    placeholder="Nhập địa chỉ." required >
+                                <input name="address" type="text" class="form-control" id="" placeholder="Nhập địa chỉ."
+                                    required>
                             </div>
                         </div>
 
@@ -58,7 +59,8 @@
                             </div>
                             <div class="col-6">
                                 <input name="SDT" type="number" class="form-control" id=""
-                                    placeholder="Nhập số điện thoại" value="<?php echo $row['SDT']?>" required  minlength="10" maxlength="10">
+                                    placeholder="Nhập số điện thoại" value="<?php echo $row['SDT']?>" required
+                                    minlength="10" maxlength="10">
                             </div>
                         </div>
                         <!-- User Name -->
@@ -120,20 +122,20 @@
                             $sql_delete = "DELETE FROM giohang WHERE IDTaiKhoan = $idtaikhoan";
                             $result_delete = mysqli_query($con, $sql_delete);
                                 ?>
-                                    <script>
-                                        alert("Bạn đã thanh toán")
-                                        window.location="../trangchu/index.php?admin=trangchu"
-                                    </script>
-                                <?php
+            <script>
+                alert("Bạn đã thanh toán")
+                window.location = "../trangchu/index.php?admin=trangchu"
+            </script>
+            <?php
                             }
                         }
                     }else{
                         ?>
-                            <script>
-                                alert("Bạn chưa có sản phẩm nào ở trong giỏ hàng")
-                                window.location="../trangchu/index.php?admin=trangchu"
-                            </script>
-                        <?php
+            <script>
+                alert("Bạn chưa có sản phẩm nào ở trong giỏ hàng")
+                window.location = "../trangchu/index.php?admin=trangchu"
+            </script>
+            <?php
                             
                     }
                 }

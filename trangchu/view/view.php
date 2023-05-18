@@ -53,7 +53,7 @@
     ?>
     <div class="row" id="khung_gia_sp">
         <?php
-            $sql = " SELECT * from sanpham s ,giasanpham g,  loai l, thuoctinh t, nhacungcap n, baiviet bv, loaitin lt  where s.IDSanPham = g.IDSanPham and s.IDLoai = l.IDLoai and s.IDThuocTinh = t.IDThuocTinh and s.IDNhaCungCap = n.IDNhaCungCap and s.IDSanPham = bv.IDSanPham and bv.idloaitin = lt.idloaitin and s.IDSanPham = $id ";
+            $sql = " SELECT * from sanpham s ,giasanpham g,  loai l, thuoctinh t, nhacungcap n, baiviet bv where s.IDSanPham = g.IDSanPham and s.IDLoai = l.IDLoai and s.IDThuocTinh = t.IDThuocTinh and s.IDNhaCungCap = n.IDNhaCungCap and s.IDSanPham = bv.IDSanPham and s.IDSanPham = $id ";
             $kq = mysqli_query($con, $sql);
             if (mysqli_num_rows($kq) > 0) {
                 while ($row = mysqli_fetch_array($kq)) {
@@ -76,7 +76,7 @@
     <?php  if (!isset($_SESSION['TenDangNhap']) || $_SESSION['TenDangNhap']=='') { ?>
         <p class="text-center" style="float: left;"><a href="../" class="text-right"><button  type="submit" name="form_click_capnhap" value="save" class="btn btn-outline-info mb-3 btn-lg"><i class="fas fa-shopping-cart" style="color: #26e8d2;"></i> Thêm giỏ hàng</button></a></p>
 
-        <p class="text-center"><a href="../" class="text-right"><button  type="submit" name="form_click_pay_now" value="save" class="btn btn-outline-success mb-3 btn-lg"> Mua ngay</button></a></p>    
+        <p class="text-center" style="float: left; margin-left: 30px;"><a href="../" class="text-right"><button  type="submit" name="form_click_pay_now" value="save" class="btn btn-outline-success mb-3 btn-lg"> Mua ngay</button></a></p>    
     <?php }else{ ?>
         <p class="text-center" style="float: left;"><a href="./index.php?admin=themsp&IDSanPham=<?php echo $row['IDSanPham'];?>&IDTaiKhoan=<?php echo $_SESSION['IDTaiKhoan'];?>" class="text-right"><button  type="submit" name="form_click_capnhap" value="save" class="btn btn-outline-info mb-3 btn-lg"><i class="fas fa-shopping-cart" style="color: #26e8d2;"></i> Thêm giỏ hàng</button></a></p>
 

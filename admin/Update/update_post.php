@@ -14,7 +14,12 @@
             }
             $tomtat = $_POST['SummaryPosts'];
             $noidung = $_POST['PostsContent'];
-            $sql_post = "UPDATE `baiviet` SET `tenbaiviet`='$tenpost',`anhminhhoa`='$dich',`tomtat`='$tomtat',`noidung`='$noidung',`idloaitin`='$loaitin',`idSanPham`='$sp' WHERE `idbaiviet`='$id_baiviet'";
+            if ($loaitin == "") {
+                $sql_post = "UPDATE `baiviet` SET `tenbaiviet`='$tenpost',`anhminhhoa`='$dich',`tomtat`='$tomtat',`noidung`='$noidung',`idSanPham`='$sp' WHERE `idbaiviet`='$id_baiviet'";
+            }else{
+                $sql_post = "UPDATE `baiviet` SET `tenbaiviet`='$tenpost',`anhminhhoa`='$dich',`tomtat`='$tomtat',`noidung`='$noidung',`idloaitin`='$loaitin',`idSanPham`='$sp' WHERE `idbaiviet`='$id_baiviet'";
+            }
+            
             $kq_post = mysqli_query($con, $sql_post);
 
             if ( $kq_post === True) {

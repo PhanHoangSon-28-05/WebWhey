@@ -1,17 +1,17 @@
-.ddsmoothmenu{
+.ddsmoothmenu {
 	float: left;
 }
 
-.ddsmoothmenu ul{
-	z-index:100;
+.ddsmoothmenu ul {
+	z-index: 100;
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	
+
 }
 
 /*Top level list items*/
-.ddsmoothmenu ul li{
+.ddsmoothmenu ul li {
 	position: relative;
 	display: inline;
 	float: left;
@@ -24,23 +24,29 @@
 	height: 40px;
 	line-height: 40px;
 	font-size: 25px;
-	color: #2f2f2f;	
+	color: #2f2f2f;
 	text-decoration: none;
 	outline: none;
 	text-align: center;
 }
 
-* html .ddsmoothmenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
-display: inline-block;
+* html .ddsmoothmenu ul li a {
+	/*IE6 hack to get sub menu links to behave correctly*/
+	display: inline-block;
 }
 
-.ddsmoothmenu ul li a.selected, .ddsmoothmenu ul li a:hover { /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+.ddsmoothmenu ul li a.selected, .ddsmoothmenu ul li a:hover {
+	/*CSS class that's dynamically added to the currently active menu items' LI A element*/
 	color: #fff;
 	background: #2f2f2f;
 }
 
 /* Holly Hack for IE \*/
-* html .ddsmoothmenu{height: 1%;} /*Holly Hack for IE7 and below*/
+* html .ddsmoothmenu {
+	height: 1%;
+}
+
+/*Holly Hack for IE7 and below*/
 
 .page-container {
 	overflow: hidden;

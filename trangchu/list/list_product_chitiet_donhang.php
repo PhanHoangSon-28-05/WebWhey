@@ -8,7 +8,6 @@
     font-size: 20px;
     text-align: center;
   }
-
 </style>
 
 <?php
@@ -21,8 +20,8 @@ $mahoadon = $_GET['IDMaHDB'];
   <table class="table table-bordered table-hover table-dark">
     <thead class="table-success">
       <tr>
-        <th >Tên sản phẩm</th>
-        <th width="150px" >Số lượng</th>
+        <th>Tên sản phẩm</th>
+        <th width="150px">Số lượng</th>
         <th>Thanh tiền</th>
         <th>Đơn giá</th>
       </tr>
@@ -35,29 +34,29 @@ $mahoadon = $_GET['IDMaHDB'];
             if (mysqli_num_rows($kq) > 0) {
                 while ($row = mysqli_fetch_array($kq)) {
                     ?>
-                      <tr>
-                        <td>
-                          <p><?php echo $row['TenSanPham'];?></p>
-                        </td>
-                        <td >
-                          <p><?php echo $row['SoLuong'];?></p>
-                        </td>
-                        <td>
-                          <p><?php echo $row['DonGia'];?></p>
-                        </td>
-                        <td>
-                          <p><?php echo number_format($row['DonGia'] * $row['SoLuong']).' VNĐ';?></p>
-                        </td>
-                      </tr>
-                    <?php
+      <tr>
+        <td>
+          <p><?php echo $row['TenSanPham'];?></p>
+        </td>
+        <td>
+          <p><?php echo $row['SoLuong'];?></p>
+        </td>
+        <td>
+          <p><?php echo $row['DonGia'];?></p>
+        </td>
+        <td>
+          <p><?php echo number_format($row['DonGia'] * $row['SoLuong']).' VNĐ';?></p>
+        </td>
+      </tr>
+      <?php
                 }
             }
         ?>
   </table>
-  
+
 </div>
-<div class="container-fluid"style="margin-bottom: 10px;">
-<table class="table table-bordered table-hover table-dark" >
+<div class="container-fluid" style="margin-bottom: 10px;">
+  <table class="table table-bordered table-hover table-dark">
     <thead class="table-success">
       <tr>
         <th class="text-center" width="20px">Mã</th>
@@ -78,36 +77,35 @@ $mahoadon = $_GET['IDMaHDB'];
             if (mysqli_num_rows($kq) > 0) {
                 while ($row = mysqli_fetch_array($kq)) {
                     ?>
-                      <tr>
-                        <td>
-                          <p><?php echo $row['MaHDB'];?></p>
-                        </td>
-                        <td>
-                          <p><?php echo $row['TenNguoiNhan'];?></p>
-                        </td>
-                        <td>
-                          <p><?php echo $row['DiaChi'];?></p>
-                        </td>
-                        <td>
-                          <p><?php echo $row['SDT']?></p>
-                        </td>
-                        <td>
-                          <p><?php echo $row['GhiChu'];?></p>
-                        </td>
-                        <td>
-                          <p><?php echo number_format( $row['TongTien']).' VNĐ';?></p>
-                        </td>
-                        <td>
-                          <p><?php  echo date("d-m-Y", strtotime($row['NgayTao']));?></p>
-                        </td>
-                        <td>
-                          <p><?php  echo $row['TinhTrangVanChuyen'];?></p>
-                        </tb>
-                      </tr>
-                    <?php
+      <tr>
+        <td>
+          <p><?php echo $row['MaHDB'];?></p>
+        </td>
+        <td>
+          <p><?php echo $row['TenNguoiNhan'];?></p>
+        </td>
+        <td>
+          <p><?php echo $row['DiaChi'];?></p>
+        </td>
+        <td>
+          <p><?php echo $row['SDT']?></p>
+        </td>
+        <td>
+          <p><?php echo $row['GhiChu'];?></p>
+        </td>
+        <td>
+          <p><?php echo number_format( $row['TongTien']).' VNĐ';?></p>
+        </td>
+        <td>
+          <p><?php  echo date("d-m-Y", strtotime($row['NgayTao']));?></p>
+        </td>
+        <td>
+          <p><?php  echo $row['TinhTrangVanChuyen'];?></p>
+          </tb>
+      </tr>
+      <?php
                 }
             }
         ?>
   </table>
 </div>
-

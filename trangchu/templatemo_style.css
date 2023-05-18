@@ -147,7 +147,7 @@ cite span {
 }
 
 .bs_box h4 a {
-	font-size: 11px;	
+	font-size: 11px;
 	color: #000;
 	font-weight: 700;
 }
@@ -201,10 +201,10 @@ cite span {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-  }
+}
 
-  
-  .slider-content {
+
+.slider-content {
 	position: absolute;
 	z-index: 1;
 	width: 100%;
@@ -214,18 +214,18 @@ cite span {
 	display: flex;
 	align-items: stretch;
 	justify-content: center;
-  }
-  
-  .slider-content {
+}
+
+.slider-content {
 	width: 100%;
 	color: #fff;
 	margin-top: 0;
 	margin-left: 0;
 	text-shadow: none;
 	padding-top: 7.5em;
-  }
-  
-  .slider-content h1 {
+}
+
+.slider-content h1 {
 	font-size: 5em;
 	font-weight: 200;
 	margin-top: 0;
@@ -234,30 +234,31 @@ cite span {
 	padding-left: 0;
 	display: inline-block;
 	padding: 0 10px;
-  }
-  .slider-content p {
+}
+
+.slider-content p {
 	margin-bottom: 0;
 	margin-top: .2em;
 	font-size: 1.5em;
 	padding: 5px 10px;
 	font-weight: 200;
 	color: #fff;
-  }
-  section[data-slide-index
-  ="0"] .slider-content p {
+}
+
+section[data-slide-index="0"] .slider-content p {
 	color: #1e3330;
-  }
-  
-  section[data-slide-index="0"] .slider-content h1 {
+}
+
+section[data-slide-index="0"] .slider-content h1 {
 	color: #2b504b;
-  }
-  
-  .slider-content .slider-box {
+}
+
+.slider-content .slider-box {
 	text-align: center;
-  }
-  
-  /* Overlay */
-  .slendr-slide:before {
+}
+
+/* Overlay */
+.slendr-slide:before {
 	position: absolute;
 	z-index: 1;
 	width: 100%;
@@ -265,18 +266,20 @@ cite span {
 	left: 0;
 	top: 0;
 	content: ' ';
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
 	.slider-content {
-	  margin: 0;
-	  padding-top: 3em;
+		margin: 0;
+		padding-top: 3em;
 	}
+
 	.slider-content h1 {
-	  font-size: 4em;
+		font-size: 4em;
 	}
+
 	.slider-content p {
-	  padding: 0 1em;
-	  font-size: 1.35em;
+		padding: 0 1em;
+		font-size: 1.35em;
 	}
-  }
+}

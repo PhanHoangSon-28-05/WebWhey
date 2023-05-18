@@ -8,7 +8,6 @@
     font-size: 20px;
     text-align: center;
   }
-
 </style>
 
 
@@ -37,37 +36,38 @@
             if (mysqli_num_rows($kq) > 0) {
                 while ($row = mysqli_fetch_array($kq)) {
                     ?>
-                      <tr>
-                        <td>
-                          <p><?php echo $row['MaHDB'];?></p>
-                        </td>
-                        <td >
-                          <p style="text-align: left;"><?php echo $row['TenDangNhap'];?></p>
-                        </td>
-                        <td>
-                          <p><?php echo $row['Ho']." ".$row['Ten'];?></p>
-                        </td>
-                        <td>
-                          <p><?php echo $row['DiaChi'];?></p>
-                        </td>
-                        <td>
-                          <p><?php echo $row['SDT']?></p>
-                        </td>
-                        <td>
-                          <p><?php echo $row['GhiChu'];?></p>
-                        </td>
-                        <td>
-                          <p><?php echo number_format( $row['TongTien']).' đ';?></p>
-                        </td>
-                        <td>
-                          <p><?php  echo date("d-m-Y", strtotime($row['NgayTao']));?></p>
-                        </td>
-                        <td>
-                          <a href="./index.php?admin=chitietdonhang&IDMaHDB=<?php echo $row['MaHDB']?>" class="text-right"><button
-                              type="submit" name="form_click_capnhap" value="Update" class="btn btn-outline-warning mb-3 btn-lg">Chi tiết</button></a>
-                          </tb>
-                      </tr>
-                    <?php
+      <tr>
+        <td>
+          <p><?php echo $row['MaHDB'];?></p>
+        </td>
+        <td>
+          <p style="text-align: left;"><?php echo $row['TenDangNhap'];?></p>
+        </td>
+        <td>
+          <p><?php echo $row['Ho']." ".$row['Ten'];?></p>
+        </td>
+        <td>
+          <p><?php echo $row['DiaChi'];?></p>
+        </td>
+        <td>
+          <p><?php echo $row['SDT']?></p>
+        </td>
+        <td>
+          <p><?php echo $row['GhiChu'];?></p>
+        </td>
+        <td>
+          <p><?php echo number_format( $row['TongTien']).' đ';?></p>
+        </td>
+        <td>
+          <p><?php  echo date("d-m-Y", strtotime($row['NgayTao']));?></p>
+        </td>
+        <td>
+          <a href="./index.php?admin=chitietdonhang&IDMaHDB=<?php echo $row['MaHDB']?>" class="text-right"><button
+              type="submit" name="form_click_capnhap" value="Update" class="btn btn-outline-warning mb-3 btn-lg">Chi
+              tiết</button></a>
+          </tb>
+      </tr>
+      <?php
                 }
             }
         ?>

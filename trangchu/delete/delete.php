@@ -7,18 +7,18 @@
     $stmt = mysqli_query($con, $sql_delete); 
     if ($stmt === TRUE) {
         ?>
-            <script>
-                alert("Bạn đã xóa sản phẩm")
-                window.location="../trangchu/index.php?admin=giohang&IDTaiKhoan= <?php echo $idtaikhoan; ?>"
-            </script>
-            <?php
+<script>
+    alert("Bạn đã xóa sản phẩm")
+    window.location = "../trangchu/index.php?admin=giohang&IDTaiKhoan= <?php echo $idtaikhoan; ?>"
+</script>
+<?php
             
     }else{
         ?>
-        <script>
-            alert("Bạn chưa sản phẩm")
-        </script>
-        <?php
+<script>
+    alert("Bạn chưa sản phẩm")
+</script>
+<?php
     }
 
 ?>

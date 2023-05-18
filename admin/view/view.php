@@ -53,7 +53,7 @@
     ?>
     <div class="row" id="khung_gia_sp">
         <?php
-            $sql = " SELECT * from sanpham s ,giasanpham g,  loai l, thuoctinh t, nhacungcap n, baiviet bv, loaitin lt  where s.IDSanPham = g.IDSanPham and s.IDLoai = l.IDLoai and s.IDThuocTinh = t.IDThuocTinh and s.IDNhaCungCap = n.IDNhaCungCap and s.IDSanPham = bv.IDSanPham and bv.idloaitin = lt.idloaitin and s.IDSanPham = $id ";
+            $sql = " SELECT * from sanpham s ,giasanpham g,  loai l, thuoctinh t, nhacungcap n, baiviet bv where s.IDSanPham = g.IDSanPham and s.IDLoai = l.IDLoai and s.IDThuocTinh = t.IDThuocTinh and s.IDNhaCungCap = n.IDNhaCungCap and s.IDSanPham = bv.IDSanPham and s.IDSanPham = $id ";
             $kq = mysqli_query($con, $sql);
             if (mysqli_num_rows($kq) > 0) {
                 while ($row = mysqli_fetch_array($kq)) {
@@ -78,7 +78,19 @@
         <div class="row">
             <div class="col-sm-3">
                 <p><?php echo preg_replace('/' . preg_quote("Tên bài viết:", '/') . '/', "<strong>Tên bài viết:</strong>", "Tên bài viết:", 1)?> <?php echo $row['tenbaiviet']; ?></p>
-                <p><?php echo preg_replace('/' . preg_quote("Tên loại tin:", '/') . '/', "<strong>Tên loại tin:</strong>", "Tên loại tin:", 1)?> <?php echo $row['tenloaitin']; ?></p>
+                <p><?php echo preg_replace('/' . preg_quote("Tên loại tin:", '/') . '/', "<strong>Tên loại tin:</strong>", "Tên loại tin:", 1)?>
+                <?php
+                    $idSanpham = $row['IDSanPham'];
+                    $sql_loaitin = " SELECT * from baiviet bv, loaitin l, sanpham s where bv.idloaitin = l.idloaitin and s.IDSanPham = bv.IDSanPham and bv.IDSanPham = $idSanpham";
+                    $kq_loaitin = mysqli_query($con, $sql_loaitin);
+                    $row_loaitin = mysqli_fetch_array($kq_loaitin);
+                    if (mysqli_num_rows($kq_loaitin) == 0) {
+                        echo "Không có";
+                    } else {
+                        echo $row_loaitin['tenloaitin'];
+                    }?>
+            
+                </p>
             </div>
             <div class="col-sm-9">
                 <p class="text-left"><img class="card-img-top" style=" max-width:50%; height:atou; margin-right:20px;" src="<?php echo $row['anhminhhoa'];?>"  alt=""></p>
@@ -91,7 +103,7 @@
         <div class="nut">
         <!-- href="./index.php?admin=updateproperties&IDProperties=<?php //echo $row['IDThuocTinh']?>" -->
         <ul>
-            <li style="display: block; margin-bottom: 10px;"><a class="text-center"><button type="submit" name="form_click_capnhap" value="Update" class="btn btn-outline-warning mb-3 btn-lg">Chỉnh sửa</button></a>
+            <li style="display: block; margin-bottom: 10px;"><a class="text-center"><button type="submit" name="form_click_capnhap" value="Update" class="btn btn-outline-warning mb-3 btn-lg" style="font-weight: bold">Chỉnh sửa</button></a>
                 <ul class="sub-menu">
                    
                     <li><a href="./index.php?admin=update_product_price&IDGia=<?php echo $row['IDGia']?>&IDView=<?php echo $id;?>"><button type="submit" name="form_click_capnhap" value="Update" class="btn btn-outline-primary mb-3 btn-lg">Giá Sản Phẩm</button></a></li>

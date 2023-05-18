@@ -35,18 +35,18 @@
                         $_SESSION['TenKhachHang'] = $row_lay_tk['Ho']." ".$row_lay_tk['Ten'];
                         $_SESSION['SDT'] = $row_lay_tk['SDT'];
                     ?>
-                    <script>
-                        alert("Bạn đã tạo tài khoản thành công");
-                        window.location="../DoAnThuongMai/trangchu/";
-                    </script>
-                    <?php
+<script>
+    alert("Bạn đã tạo tài khoản thành công");
+    window.location = "../DoAnThuongMai/trangchu/";
+</script>
+<?php
                     
                 }else{
                     ?>
-                    <script>
-                        alert("Bạn chưa tạo tài khoản thành công");
-                    </script>
-                    <?php
+<script>
+    alert("Bạn chưa tạo tài khoản thành công");
+</script>
+<?php
                 }
             }
         }
