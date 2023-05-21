@@ -7,9 +7,6 @@ if (isset($_GET['admin'])) {
             include('view\view.php');
             break;
         // New
-        case 'trangchu':
-            include('list\list_product_home.php');
-            break;
         case 'loaisp':
             include('list\list_product_loai.php');
             break;

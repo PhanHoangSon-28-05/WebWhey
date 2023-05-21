@@ -74,7 +74,7 @@
                         <div class="col-sm-9">
                             <div id="top_nav" class="ddsmoothmenu">
                                 <ul>
-                                    <li><a href="./index.php?admin=trangchu" class="selected">Trang chủ</a></li>
+                                    <li><a href="./" class="selected">Trang chủ</a></li>
                                     <?php 
                                     include('laymenu/menubar.php');
                                     ?>

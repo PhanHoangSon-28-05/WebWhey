@@ -21,7 +21,7 @@
                 Thuộc tính: <?php echo $row['Tenthuoctinh']; ?></br></br>
                 Mô tả: <?php echo $row['MoTaSanPham']; ?> </br></br>
             </p>
-            <p class="product_price"><?php echo number_format($row['GiaBan']); ?></p>
+            <p class="product_price"><?php echo number_format($row['GiaBan']).' VNĐ'; ?></p>
             <?php  if (!isset($_SESSION['TenDangNhap']) || $_SESSION['TenDangNhap']=='') { ?>
             <p class="text-center" style="float: left;"><a href="../" class="text-right"><button type="submit"
                         name="form_click_capnhap" value="save" class="btn btn-outline-info mb-3 btn-lg"><i
