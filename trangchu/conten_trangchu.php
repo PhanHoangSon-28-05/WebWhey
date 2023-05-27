@@ -38,10 +38,7 @@ if (isset($_GET['admin'])) {
         case 'pay':
             include('form\form_pay.php'); 
             break;
-        
-        
         default:
-
             break;
     }
 }else{
