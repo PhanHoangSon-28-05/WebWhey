@@ -14,25 +14,25 @@
 
             if ($kq_capnhap_nccc === TRUE) {
                 ?>
-                    <script>
-                        alert("Bạn đã cập nhập nhà cung cấp");
-                        window.location="../admin/?admin=listnhacungcap";
-                    </script>
-                    <?php
+<script>
+    alert("Bạn đã cập nhật nhà cung cấp");
+    window.location = "../admin/?admin=listnhacungcap";
+</script>
+<?php
                     
             }else{
                 ?>
-                <script>
-                    alert("Bạn chưa cập nhập nhà cung cấp");
-                </script>
-                <?php
+<script>
+    alert("Bạn chưa cập nhật nhà cung cấp");
+</script>
+<?php
             }
         }else{
             ?>
-                <script>
-                    alert("Bạn chưa nhập tên nhà cung cấp")
-                </script>
-            <?php
+<script>
+    alert("Bạn chưa nhập tên nhà cung cấp")
+</script>
+<?php
         }
     }
 ?>

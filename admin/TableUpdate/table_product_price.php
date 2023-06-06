@@ -84,10 +84,10 @@
 
                     <a href="?admin=listgiasanpham">
                         <p><button id="btn-tooltip" type="submit" name="form_click" value="save"
-                                class="btn btn-outline-success mb-3 btn-lg">Cập nhập</button></p>
+                                class="btn btn-outline-success mb-3 btn-lg">Cập nhật</button></p>
                     </a>
                     <!-- Below are suggestions for the button  -->
-                    <!-- <div id="tooltip"><p class="text-center">Nếu trùng sản phẩm nó sẽ cập nhập</p></div> -->
+                    <!-- <div id="tooltip"><p class="text-center">Nếu trùng sản phẩm nó sẽ Cập nhật</p></div> -->
                     <!-- <script>
                     const btnTooltip = document.querySelector('#btn-tooltip');
                     const tooltip = document.querySelector('#tooltip');

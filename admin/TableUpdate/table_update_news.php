@@ -61,7 +61,7 @@
                     </div>
 
                     <p class="text-center"><a class="text-right"><button type="submit" name="form_click_capnhap"
-                                value="save" class="btn btn-outline-success mb-3 btn-lg">Cập nhập</button></a></p>
+                                value="save" class="btn btn-outline-success mb-3 btn-lg">Cập nhật</button></a></p>
                     <?php
                     }
                 }

@@ -10,25 +10,25 @@
 
             if ($kq_capnhap_thuoctinh === TRUE) {
                 ?>
-                    <script>
-                        alert("Bạn đã cập nhập thuộc tính sản phẩm");
-                        window.location="../admin/?admin=listloaisanpham";
-                    </script>
-                    <?php
+<script>
+    alert("Bạn đã cập nhập thuộc tính sản phẩm");
+    window.location = "../admin/?admin=listloaisanpham";
+</script>
+<?php
                     
             }else{
                 ?>
-                <script>
-                    alert("Bạn chưa cập nhập thuộc tính sản phẩm");
-                </script>
-                <?php
+<script>
+    alert("Bạn chưa cập nhật thuộc tính sản phẩm");
+</script>
+<?php
             }
         }else{
             ?>
-                <script>
-                    alert("Bạn chưa nhập tên nhà cung cấp");
-                </script>
-            <?php
+<script>
+    alert("Bạn chưa nhật tên nhà cung cấp");
+</script>
+<?php
         }
     }
 ?>

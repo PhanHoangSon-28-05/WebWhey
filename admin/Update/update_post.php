@@ -35,14 +35,14 @@
             if ( $kq_post === True) {
                     ?>
 <script>
-    alert("Bạn đã cập nhập bài viết sản phẩm");
+    alert("Bạn đã cập nhật bài viết sản phẩm");
     window.location = "../admin/index.php?admin=view&IDView=<?php echo $id;?>";
 </script>
 <?php
             }else{
                 ?>
 <script>
-    alert("Bạn chưa cập nhập bài viết sản phẩm");
+    alert("Bạn chưa cập nhật bài viết sản phẩm");
 </script>
 <?php
             }

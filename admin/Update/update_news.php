@@ -17,25 +17,25 @@
 
             if ($kq_capnhap_gia === TRUE) {
                 ?>
-                    <script>
-                        alert("Bạn đã cập nhập tin");
-                        window.location="../admin/?admin=listtintuc";
-                    </script>
-                    <?php
+<script>
+    alert("Bạn đã cập nhật tin");
+    window.location = "../admin/?admin=listtintuc";
+</script>
+<?php
                     
             }else{
                 ?>
-                <script>
-                    alert("Bạn chưa cập nhập tin");
-                </script>
-                <?php
+<script>
+    alert("Bạn chưa cập nhật tin");
+</script>
+<?php
             }
         }else{
             ?>
-                <script>
-                    alert("Bạn chưa nhập tên tin");
-                </script>
-            <?php
+<script>
+    alert("Bạn chưa nhập tên tin");
+</script>
+<?php
         }
     }
 ?>

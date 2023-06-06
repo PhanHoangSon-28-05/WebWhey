@@ -126,7 +126,7 @@
                         </tr>
                     </div>
                     <p class="text-center"><button type="submit" name="form_click" value="save"
-                            class="btn btn-outline-success mb-3 btn-lg">Cập nhập</button></p>
+                            class="btn btn-outline-success mb-3 btn-lg">Cập nhật</button></p>
                     <?php
                     }
                 }

@@ -11,25 +11,25 @@
 
             if ($kq_capnhap_loai === TRUE) {
                 ?>
-                    <script>
-                        alert("Bạn đã cập nhập loại sản phẩm");
-                        window.location="../admin/?admin=listloaisanpham";
-                    </script>
-                    <?php
+<script>
+    alert("Bạn đã cập nhật loại sản phẩm");
+    window.location = "../admin/?admin=listloaisanpham";
+</script>
+<?php
                     
             }else{
                 ?>
-                <script>
-                    alert("Bạn chưa cập nhập loại sản phẩm");
-                </script>
-                <?php
+<script>
+    alert("Bạn chưa cập nhật loại sản phẩm");
+</script>
+<?php
             }
         }else{
             ?>
-                <script>
-                    alert("Bạn chưa nhập tên loại sản phẩm")
-                </script>
-            <?php
+<script>
+    alert("Bạn chưa nhập tên loại sản phẩm")
+</script>
+<?php
         }
     }
 ?>

@@ -25,14 +25,14 @@
             if ( $kq_sanpham == True) {
                     ?>
 <script>
-    alert("Bạn cập nhập sản phẩm");
+    alert("Bạn cập nhật sản phẩm");
     window.location = "../admin/index.php?admin=view&IDView=<?php echo $idview;?>";
 </script>
 <?php
             }else{
                 ?>
 <script>
-    alert("Bạn chưa cập nhập sản phẩm");
+    alert("Bạn chưa cập nhật sản phẩm");
 </script>
 <?php
             }
