@@ -47,7 +47,9 @@ function whey(){
             <p style="text-align:left; font-size: 20px; height: 300px; color: black; line-height: 0.8;">
                 Nhà cung cấp: <?php echo $row['TenNhaCungCap']; ?></br></br>
                 Thuộc tính: <?php echo $row['Tenthuoctinh']; ?></br></br>
-                Mô tả: <?php echo wordwrap($row['MoTaSanPham'], 30, "\n", true); ?> </br></br>
+                Mô tả:
+                <?php echo "<span style='line-height: 1.2;'>" . wordwrap($row['MoTaSanPham'], 30, "\n", true) . "</span>";?>
+                </br></br>
             </p>
             <p class="product_price"><?php echo number_format($row['GiaBan']).' VNĐ'; ?></p>
             <?php  if (!isset($_SESSION['TenDangNhap'])||$_SESSION['TenDangNhap']=='') { ?>
@@ -109,7 +111,9 @@ function Mass(){
             <p style="text-align:left; font-size: 20px; height: 300px; color: black; line-height: 0.8;">
                 Nhà cung cấp: <?php echo $row['TenNhaCungCap']; ?></br></br>
                 Thuộc tính: <?php echo $row['Tenthuoctinh']; ?></br></br>
-                Mô tả: <?php echo $row['MoTaSanPham']; ?> </br></br>
+                Mô tả:
+                <?php echo "<span style='line-height: 1.2;'>" . wordwrap($row['MoTaSanPham'], 30, "\n", true) . "</span>";?>
+                </br></br>
             </p>
             <p class="product_price"><?php echo number_format($row['GiaBan']).' VNĐ'; ?></p>
             <?php  if (!isset($_SESSION['TenDangNhap'])||$_SESSION['TenDangNhap']=='') { ?>
@@ -174,7 +178,9 @@ function Pre_workout_Creatin(){
             <p style="text-align:left; font-size: 20px; height: 300px; color: black; line-height: 0.8;">
                 Nhà cung cấp: <?php echo $row['TenNhaCungCap']; ?></br></br>
                 Thuộc tính: <?php echo $row['Tenthuoctinh']; ?></br></br>
-                Mô tả: <?php echo $row['MoTaSanPham']; ?> </br></br>
+                Mô tả:
+                <?php echo "<span style='line-height: 1.2;'>" . wordwrap($row['MoTaSanPham'], 30, "\n", true) . "</span>";?>
+                </br></br>
             </p>
             <p class="product_price"><?php echo number_format($row['GiaBan']).' VNĐ'; ?></p>
             <?php  if (!isset($_SESSION['TenDangNhap'])||$_SESSION['TenDangNhap']=='') { ?>
@@ -221,7 +227,9 @@ function Pre_workout_Creatin(){
             <p style="text-align:left; font-size: 20px; height: 300px; color: black; line-height: 0.8;">
                 Nhà cung cấp: <?php echo $row['TenNhaCungCap']; ?></br></br>
                 Thuộc tính: <?php echo $row['Tenthuoctinh']; ?></br></br>
-                Mô tả: <?php echo $row['MoTaSanPham']; ?> </br></br>
+                Mô tả:
+                <?php echo "<span style='line-height: 1.2;'>" . wordwrap($row['MoTaSanPham'], 30, "\n", true) . "</span>";?>
+                </br></br>
             </p>
             <p class="product_price"><?php echo number_format($row['GiaBan']).' VNĐ'; ?></p>
             <?php  if (!isset($_SESSION['TenDangNhap'])||$_SESSION['TenDangNhap']=='') { ?>
@@ -280,7 +288,9 @@ function Amino_Acid_BCAAs(){
             <p style="text-align:left; font-size: 20px; height: 300px; color: black; line-height: 0.8;">
                 Nhà cung cấp: <?php echo $row['TenNhaCungCap']; ?></br></br>
                 Thuộc tính: <?php echo $row['Tenthuoctinh']; ?></br></br>
-                Mô tả: <?php echo $row['MoTaSanPham']; ?> </br></br>
+                Mô tả:
+                <?php echo "<span style='line-height: 1.2;'>" . wordwrap($row['MoTaSanPham'], 30, "\n", true) . "</span>";?>
+                </br></br>
             </p>
             <p class="product_price"><?php echo number_format($row['GiaBan']).' VNĐ'; ?></p>
             <?php  if (!isset($_SESSION['TenDangNhap'])||$_SESSION['TenDangNhap']=='') { ?>
@@ -327,7 +337,9 @@ function Amino_Acid_BCAAs(){
             <p style="text-align:left; font-size: 20px; height: 300px; color: black; line-height: 0.8;">
                 Nhà cung cấp: <?php echo $row['TenNhaCungCap']; ?></br></br>
                 Thuộc tính: <?php echo $row['Tenthuoctinh']; ?></br></br>
-                Mô tả: <?php echo $row['MoTaSanPham']; ?> </br></br>
+                Mô tả:
+                <?php echo "<span style='line-height: 1.2;'>" . wordwrap($row['MoTaSanPham'], 30, "\n", true) . "</span>";?>
+                </br></br>
             </p>
             <p class="product_price"><?php echo number_format($row['GiaBan']).' VNĐ'; ?></p>
             <?php  if (!isset($_SESSION['TenDangNhap'])||$_SESSION['TenDangNhap']=='') { ?>
@@ -389,7 +401,9 @@ function Vitamin(){
             <p style="text-align:left; font-size: 20px; height: 300px; color: black; line-height: 0.8;">
                 Nhà cung cấp: <?php echo $row['TenNhaCungCap']; ?></br></br>
                 Thuộc tính: <?php echo $row['Tenthuoctinh']; ?></br></br>
-                Mô tả: <?php echo $row['MoTaSanPham']; ?> </br></br>
+                Mô tả:
+                <?php echo "<span style='line-height: 1.2;'>" . wordwrap($row['MoTaSanPham'], 30, "\n", true) . "</span>";?>
+                </br></br>
             </p>
             <p class="product_price"><?php echo number_format($row['GiaBan']).' VNĐ'; ?></p>
             <?php  if (!isset($_SESSION['TenDangNhap'])||$_SESSION['TenDangNhap']=='') { ?>
@@ -436,7 +450,9 @@ function Vitamin(){
             <p style="text-align:left; font-size: 20px; height: 300px; color: black; line-height: 0.8;">
                 Nhà cung cấp: <?php echo $row['TenNhaCungCap']; ?></br></br>
                 Thuộc tính: <?php echo $row['Tenthuoctinh']; ?></br></br>
-                Mô tả: <?php echo $row['MoTaSanPham']; ?> </br></br>
+                Mô tả:
+                <?php echo "<span style='line-height: 1.2;'>" . wordwrap($row['MoTaSanPham'], 30, "\n", true) . "</span>";?>
+                </br></br>
             </p>
             <p class="product_price"><?php echo number_format($row['GiaBan']).' VNĐ'; ?></p>
             <?php  if (!isset($_SESSION['TenDangNhap'])||$_SESSION['TenDangNhap']=='') { ?>
@@ -496,7 +512,9 @@ function GiamMo(){
             <p style="text-align:left; font-size: 20px; height: 300px; color: black; line-height: 0.8;">
                 Nhà cung cấp: <?php echo $row['TenNhaCungCap']; ?></br></br>
                 Thuộc tính: <?php echo $row['Tenthuoctinh']; ?></br></br>
-                Mô tả: <?php echo $row['MoTaSanPham']; ?> </br></br>
+                Mô tả:
+                <?php echo "<span style='line-height: 1.2;'>" . wordwrap($row['MoTaSanPham'], 30, "\n", true) . "</span>";?>
+                </br></br>
             </p>
             <p class="product_price"><?php echo number_format($row['GiaBan']).' VNĐ'; ?></p>
             <?php  if (!isset($_SESSION['TenDangNhap'])||$_SESSION['TenDangNhap']=='') { ?>
@@ -543,7 +561,9 @@ function GiamMo(){
             <p style="text-align:left; font-size: 20px; height: 300px; color: black; line-height: 0.8;">
                 Nhà cung cấp: <?php echo $row['TenNhaCungCap']; ?></br></br>
                 Thuộc tính: <?php echo $row['Tenthuoctinh']; ?></br></br>
-                Mô tả: <?php echo $row['MoTaSanPham']; ?> </br></br>
+                Mô tả:
+                <?php echo "<span style='line-height: 1.2;'>" . wordwrap($row['MoTaSanPham'], 30, "\n", true) . "</span>";?>
+                </br></br>
             </p>
             <p class="product_price"><?php echo number_format($row['GiaBan']).' VNĐ'; ?></p>
             <?php  if (!isset($_SESSION['TenDangNhap'])||$_SESSION['TenDangNhap']=='') { ?>
